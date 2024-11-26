@@ -5,6 +5,12 @@ venv/
 env/
 .venv/
 
+# Ignorar directorios específicos del entorno virtual
+Lib/
+Scripts/
+pyvenv.cfg
+
+
 # Ignorar archivos de Python compilados
 __pycache__/
 *.pyc
