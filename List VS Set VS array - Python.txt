@@ -1,0 +1,52 @@
+LIST vs SET vs ARRAY - PYTHON
+-------------------------------------------------------------------------------------------------------------------
+
+.Usa una list si necesitas flexibilidad en cuanto a los tipos de datos, necesitas mantener el orden, 
+	y puedes tener duplicados.
+
+.Usa un set si necesitas evitar duplicados y realizar operaciones matemáticas de conjuntos 
+	(unión, intersección, diferencia, etc.).
+
+.Usa un array cuando trabajes con grandes volúmenes de datos homogéneos y necesites optimizar el uso de memoria 
+	y rendimiento, especialmente cuando se trata de datos numéricos.
+
+------------------------------------------------
+---------------->  Comparativa de list, set y array en Python:
+------------------------------------------------
+
+-Característica		Lista (list)				Conjunto (set)										Array (array de Python)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.Admite duplicados		Sí					No										Sí (pero todos los elementos deben ser del 
+																			mismo tipo)
+
+.Orden de elementos		Sí (mantenido según inserción)		No (desordenado, aunque el orden de inserción se mantiene desde Python 3.7+)	Sí (el orden es mantenido)
+
+.Acceso por índice		Sí					No										Sí (acceso por índice, similar a las listas)
+
+.Mutabilidad de elementos	Sí					Sí (pero solo elementos inmutables)						Sí (solo si son del tipo que se definió en la creación del array)
+
+.Eficiencia en búsqueda		O(n)					O(1)										O(n) (más eficiente que lista si es homogéneo)
+
+.Eficiencia en inserción	O(1) al final, O(n) en medio		O(1)										O(1)
+
+.Eficiencia en eliminación	O(n)					O(1)										O(n)
+
+.Operaciones de conjuntos	No					Sí (unión, intersección, diferencia, etc.)					No
+		---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.Métodos comunes		append(), remove(), sort(), insert()	add(), remove(), union(), intersection()					append(), extend(), insert(), remove()
+
+.Uso típico			Cuando se necesita orden 
+				y/o duplicados				Cuando se necesita eliminar duplicados y hacer operaciones de conjunto		Cuando se necesitan arreglos homogéneos y se busca mayor eficiencia en 
+																			el almacenamiento de grandes cantidades de datos numéricos
+		----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.Tipos de datos permitidos	Cualquier tipo de datos			Solo elementos inmutables							Solo un tipo de dato, definido 
+																			al crear el array (por ejemplo, solo int, float, etc.)
+
+		-----------------------------------------------------------------------------------------------------------------------------------------------------------
+.Optimización en memoria	Menos eficiente en memoria debido 
+				a su flexibilidad			Más eficiente en cuanto a memoria comparado con listas cuando se trata 
+									de grandes cantidades de datos únicos						Más eficiente en memoria que las listas 
+																			cuando se usan muchos datos homogéneos
