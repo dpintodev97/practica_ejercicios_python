@@ -1,0 +1,34 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Ignorar entorno virtual
+venv/
+env/
+.venv/
+
+# Ignorar archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos de configuración del entorno
+.pytest_cache/
+*.log
+
+# Ignorar configuraciones de IDEs
+.idea/
+.vscode/
+
+# Archivos del sistema operativo
+.DS_Store
+
+# Archivos de distribución de Python
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Archivos temporales y backups
+*~
+*.bak
+*.swp
+
