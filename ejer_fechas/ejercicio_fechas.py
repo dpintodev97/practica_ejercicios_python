@@ -14,7 +14,7 @@ horas = ['14:30:00', '09:15:00', '23:59:59']
 fechas = ['2024-09-09', '2023-08-15', '2022-07-01']
 horas = ['14:30:00', '09:15:00', '23:59:59']
 
-# Convierte cada cadena de la lista fechas a un objeto datetime.date
+# 1.Convierte cada cadena de la lista fechas a un objeto datetime.date
 fechas_date = [datetime.strptime(fecha, "%Y-%m-%d").date() for fecha in fechas]
 
 # Convierte cada cadena de la lista horas a un objeto datetime.time
@@ -36,8 +36,10 @@ lista_objeto_datetime = datetime.combine(fechas_date[0], horas_time[0])
 print("La lista de objetos datetime es: ", lista_objeto_datetime )
 #NOTA: datetime.combine ----> combina dos objetos date y time en un solo objeto datetime; como es lista de elementos, se puede acceder a ellos con indices, partiendo en el 0
 
+#4.Calcula los días de diferencia que hay entre los objetos date resultantes del ejercicio 1 y la fecha actual.
 
-
-
+actual_date = datetime.now().date() #del actual objeto datetime solo quiero la fecha, por eso el .date()
+day_diff = actual_date - fechas_date[0] #resta la fecha actual menos la primera fecha de la lista
+print("Días de diferencia entre fechas: ", day_diff.days)   
 
 
