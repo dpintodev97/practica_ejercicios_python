@@ -14,8 +14,9 @@ horas = ['14:30:00', '09:15:00', '23:59:59']
 fechas = ['2024-09-09', '2023-08-15', '2022-07-01']
 horas = ['14:30:00', '09:15:00', '23:59:59']
 
-# 1.Convierte cada cadena de la lista fechas a un objeto datetime.date
+# 1.Convierte cada cadena de la lista fechas a un objeto datetime.date 
 fechas_date = [datetime.strptime(fecha, "%Y-%m-%d").date() for fecha in fechas]
+#fechas_date <- OBJETO DATETIME QUE USARÉ EN OTROS EJERCICIOS
 
 # Convierte cada cadena de la lista horas a un objeto datetime.time
 horas_time = [datetime.strptime(hora, "%H:%M:%S").time() for hora in horas]
@@ -42,4 +43,7 @@ actual_date = datetime.now().date() #del actual objeto datetime solo quiero la f
 day_diff = actual_date - fechas_date[0] #resta la fecha actual menos la primera fecha de la lista
 print("Días de diferencia entre fechas: ", day_diff.days)   
 
-
+#Elige una fecha de los objetos date resultantes del ejercicio 1 y cambiar su año a 2025.
+#nueva variable que toma por ej, el elemento tercero de la lista, y reemplaza su año por 2025:
+new_date = fechas_date[2].replace(year=2025) 
+print("Nueva fecha cambiando año por 2025: ", new_date)
