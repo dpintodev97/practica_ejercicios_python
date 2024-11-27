@@ -36,16 +36,12 @@ while i % 2 == 0:
     break  
 
 #4.
-i == 0
-print(i)
+i = 0
 while i < 10:
     i += 1
     if i == 6:    
-        print("Ejecución terminada")
-    break
-
-
-
+        print("Ejecución terminada en: ",i)
+        break
 
 #EJERCICIOS CON FOR:
 
