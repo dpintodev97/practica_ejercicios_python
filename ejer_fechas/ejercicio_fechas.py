@@ -31,11 +31,13 @@ print("La hora de hoy es: ", horas_time)
 #   El formato en el que está la cadena (%Y-%m-%d para fechas y %H:%M:%S para horas).
 #Y por último, acceso: .date() o .time() para extraer únicamente la parte de la fecha o la hora.
 
-#Combina cada elemento de los objetos date y los objetos time de los dos ejercicios anteriores para crear una
+#3.Combina cada elemento de los objetos date y los objetos time de los dos ejercicios anteriores para crear una
 #lista de objetos datetime:
-lista_objeto_datetime = datetime.combine(fechas_date[0], horas_time[0])
-print("La lista de objetos datetime es: ", lista_objeto_datetime )
-#NOTA: datetime.combine ----> combina dos objetos date y time en un solo objeto datetime; como es lista de elementos, se puede acceder a ellos con indices, partiendo en el 0
+
+# Combinar con zip para crear una lista de objetos datetime, que ITERE simultáneamente cada elemento de cada lista:
+lista_objetos_datetime = [datetime.combine(fecha, hora) for fecha, hora in zip(fechas_date, horas_time)]
+print("La lista de objetos datetime es: ", lista_objetos_datetime)
+#NOTA: datetime.combine ----> combina dos objetos date y time en un solo objeto datetime
 
 #4.Calcula los días de diferencia que hay entre los objetos date resultantes del ejercicio 1 y la fecha actual.
 
@@ -47,3 +49,7 @@ print("Días de diferencia entre fechas: ", day_diff.days)
 #nueva variable que toma por ej, el elemento tercero de la lista, y reemplaza su año por 2025:
 new_date = fechas_date[2].replace(year=2025) 
 print("Nueva fecha cambiando año por 2025: ", new_date)
+
+#Convierte cada objeto datetime resultante del ejercicio 3 en una cadena con el formato DD/MM/YYYY HH:MM
+datetime_string = [dt1.strftime("%d/%m/%Y %H:%M")for dt1 in lista_objetos_datetime]
+print("En formato cadena de texto: ", datetime_string)
